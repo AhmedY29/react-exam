@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 function ProductDetails() {
   const [product, setProduct] = useState({});
+  const navigate = useNavigate();
   const { id } = useParams();
   useEffect(() => {
     axios
@@ -54,6 +55,12 @@ function ProductDetails() {
             >
               Add to Cert
             </button>
+            <div
+              onClick={() => navigate("/")}
+              className="text-blue-500 hover:underline cursor-pointer"
+            >
+              <h1>Back to List</h1>
+            </div>
           </div>
         </div>
       </div>
