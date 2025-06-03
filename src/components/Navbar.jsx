@@ -36,7 +36,7 @@ function Navbar() {
 
   return (
     <nav className="nav-section sticky top-0 bg-[#131921] text-white p-2 z-10">
-      <div className="nav-content flex justify-between items-center px-2 w-full">
+      <div className="nav-content flex gap-5 lg:justify-between items-center px-2 w-full">
         <div className="logo flex items-center gap-3">
           <Link to={"/"}>
             <div className="hover:outline-1 p-1">
@@ -56,7 +56,7 @@ function Navbar() {
             </div>
           </button>
         </div>
-        <div className="search flex justify-center lg:w-[50%]">
+        <div className="search hidden lg:flex justify-center lg:w-[50%]">
           <form className="flex bg-white text-black w-[60%] ">
             <select className="bg-gray-300 p-2 " name="" id="">
               <option value="all">All</option>
@@ -75,8 +75,8 @@ function Navbar() {
             </button>
           </form>
         </div>
-        <div className="actions hidden lg:flex items-center gap-3 ">
-          <div className="p-2 hover:outline-1">
+        <div className="actions flex items-center gap-3 ">
+          <div className="p-2 hover:outline-1 hidden lg:block">
             <button className="">
               <div className="flex gap-2">
                 <img
@@ -113,7 +113,7 @@ function Navbar() {
             </ul>
           </div>
 
-          <button className="hover:outline-1">
+          <button className="hover:outline-1 ">
             <h1 className="text-sm font-light">Return</h1>
             <h1>& Orders</h1>
           </button>

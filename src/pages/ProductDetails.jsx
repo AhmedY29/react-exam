@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useParams } from "react-router";
 
 function ProductDetails() {
@@ -14,7 +15,7 @@ function ProductDetails() {
   return (
     <section className="product-details-section flex justify-center w-full">
       <div className="product-details-content flex flex-col items-center lg:flex-row gap-10 w-[90%] py-10">
-        <div className="img h-100 w-100 overflow-hidden">
+        <div className="img h-50 w-50 lg:h-100 lg:w-100 overflow-hidden">
           <img className="object-cover" src={product?.image} alt="" />
         </div>
         <div className="product-info flex flex-col gap-2">
@@ -47,7 +48,10 @@ function ProductDetails() {
               <h1 className="font-bold text-2xl">About this item:</h1>
               <p>{product?.description}</p>
             </div>
-            <button className="bg-[#ffd814] rounded-xl my-5 px-2 py-1 cursor-pointer">
+            <button
+              onClick={() => toast.success("Add Cert Successfully")}
+              className="bg-[#ffd814] rounded-xl my-5 px-2 py-1 cursor-pointer"
+            >
               Add to Cert
             </button>
           </div>
